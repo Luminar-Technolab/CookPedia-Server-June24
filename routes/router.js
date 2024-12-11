@@ -32,5 +32,9 @@ router.delete("/save-recipes/:id/remove",jwtMiddleware,saveRecipeController.remo
 router.get("/user-downloads",jwtMiddleware,downloadRecipeController.getUserDownloadListController)
 //edit-user
 router.post("/user/edit",jwtMiddleware,userController.editUserController)
+//all-user
+router.get("/all-users",jwtMiddleware,userController.getAllUsersController)
+//all-deonliat
+router.get("/download-list",jwtMiddleware,downloadRecipeController.getAllDownloadListController)
 
 module.exports = router
